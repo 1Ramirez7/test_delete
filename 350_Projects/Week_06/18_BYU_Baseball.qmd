@@ -1,0 +1,22 @@
+---
+title: "18  BYU Baseball"
+author: "your-name-here"
+
+editor: visual
+execute:
+  keep-md: true
+
+date: "`r format(Sys.time(), '%B %d, %Y')`"
+warnings: false
+format:
+  html:
+    df-print: paged
+    code-fold: true
+    code-line-numbers: true
+---
+
+```{r, message=FALSE, error=FALSE}
+
+if (!require("pacman")) install.packages("pacman")
+pacman::p_load(tidyverse, Lahman, priceR)
+```

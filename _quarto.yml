@@ -1,0 +1,286 @@
+project:
+  type: website
+  output-dir: docs  
+
+website:
+  title: "Your_Name_here - Data Science Portfolio"
+  favicon: Images/favicon.png
+  back-to-top-navigation: true
+  repo-url: https://github.com/your_url
+  page-footer: 
+    border: true
+    left: "Your_Name 2024©"
+    right: 
+      - icon: linkedin
+        href: Your_LinkedIn_URL
+
+  navbar:
+    background: primary
+    search: true   
+    right:
+      - text: "Home"
+        file: index.qmd
+      - text: "My Resume"
+        file: resume.qmd
+      - text: "DS250 Projects"
+        file: 250_projects.qmd
+      - text: "DS350 Projects"
+        file: 350_projects.qmd
+      - text: "DS450 Projects"
+        file: 450_projects.qmd
+      - text: "DS460 Projects"
+        file: 460_projects.qmd
+
+  sidebar:
+    - title: "DS 250 Projects"
+      style: "docked"
+      background: light
+      contents:
+        - text: "DS250 Projects"
+          file: 250_projects.qmd
+        - text: "---"
+        - text: "Project 0"
+          file: 250_Projects/project0.qmd
+        - text: "Project 1"
+          file: 250_Projects/project1.qmd
+        - text: "Project 2"
+          file: 250_Projects/project2.qmd
+        - text: "Project 3"
+          file: 250_Projects/project3.qmd
+        - text: "Project 4"
+          file: 250_Projects/project4.qmd
+        - text: "Project 5"
+          file: 250_Projects/project5.qmd
+
+# 250 qmd 1-6 for faster rendering
+
+    - title: "DS 350 Projects"
+      style: "docked"
+      background: light
+      contents:
+        - text: "DS350 Projects"
+          file: 350_projects.qmd
+        - text: "---"
+        - text: "Week 1"
+          file: 350_Projects/Week_01/week_01.qmd
+        - text: "---"
+        - text: "Week 2"
+          file: 350_Projects/Week_02/week_02.qmd
+        - text: "---"
+        - text: "Week 3"
+          file: 350_Projects/Week_03/week_03.qmd
+        - text: "---"
+        - text: "Week 4"
+          file: 350_Projects/Week_04/week_04.qmd
+        - text: "---"
+        - text: "Week 5"
+          file: 350_Projects/Week_05/week_05.qmd
+        - text: "---"
+        - text: "Week 6"
+          file: 350_Projects/Week_06/week_06.qmd
+        - text: "---"
+        - text: "Week 7"
+          file: 350_Projects/Week_07/week_07.qmd
+        - text: "---"
+        - text: "Week 8"
+          file: 350_Projects/Week_08/week_08.qmd
+        - text: "---"
+        - text: "Week 9"
+          file: 350_Projects/Week_09/week_09.qmd
+        - text: "---"
+        - text: "Week 10"
+          file: 350_Projects/Week_10/week_10.qmd
+        - text: "---"
+        - text: "Week 11"
+          file: 350_Projects/Week_11/week_11.qmd
+        - text: "---"
+        - text: "Week 12"
+          file: 350_Projects/Week_12/week_12.qmd
+        - text: "---"
+        - text: "Week 13"
+          file: 350_Projects/Week_13/week_13.qmd
+
+# adding sidebar for weekly folders for DS 350
+
+    - title: "Week 2 Sidebar"
+      style: "docked"
+      background: light
+      contents:
+        - text: "Introduction"
+          file: 350_Projects/Week_02/week_02.qmd
+        - text: "Visualizing Large Distributions"
+          file: 350_Projects/Week_02/Visualizing Large Distributions.qmd
+        - text: "Gapminder Part 1"
+          file: 350_Projects/Week_02/Gapminder Part 1.qmd
+          
+# adding sidebar for weekly folders for DS 350
+
+    - title: "Week 3 Sidebar"
+      style: "docked"
+      background: light
+      contents:
+        - text: "Introduction"
+          file: 350_Projects/Week_03/week_03.qmd
+        - text: "Gapminder Part 2"
+          file: 350_Projects/Week_03/Gapminder Part 2.qmd
+        - text: "Reducing Gun Deaths"
+          file: 350_Projects/Week_03/Reducing Gun Deaths.qmd
+        - text: "Wings to Fly"
+          file: 350_Projects/Week_03/Wings to Fly.qmd
+          
+    - title: "Week 4 Sidebar"
+      style: "docked"
+      background: light
+      contents:
+        - text: "Introduction"
+          file: 350_Projects/Week_04/week_04.qmd
+        - text: "Stock Data"
+          file: 350_Projects/Week_04/Stock Data.qmd
+        - text: "Mean Heights of Countries Over Time"
+          file: 350_Projects/Week_04/Mean Heights of Countries Over Time.qmd
+        - text: "Combining Height Files"
+          file: 350_Projects/Week_04/Combining Height Files.qmd
+
+    - title: "Week 5 Sidebar"
+      style: "docked"
+      background: light
+      contents:
+        - text: "Introduction"
+          file: 350_Projects/Week_05/week_05.qmd
+        - text: "13 Polish a Previous Visualization"
+          file: 350_Projects/Week_05/13_Polish_a_Previous_Visualization.qmd
+        - text: "14 Our World in Data Part 1"
+          file: 350_Projects/Week_05/14_Our_World_in_Data_Part_1.qmd
+        - text: "15 Choose Your Own OWD"
+          file: 350_Projects/Week_05/15_Choose_Your_Own_OWD.qmd
+
+    - title: "Week 6 Sidebar"
+      style: "docked"
+      background: light
+      contents:
+        - text: "Introduction"
+          file: 350_Projects/Week_06/week_06.qmd
+        - text: "16 Age of Planes"
+          file: 350_Projects/Week_06/16_Age_of_Planes.qmd
+        - text: "18 BYU Baseball"
+          file: 350_Projects/Week_06/18_BYU_Baseball.qmd
+
+    - title: "Week 7 Sidebar"
+      style: "docked"
+      background: light
+      contents:
+        - text: "Introduction"
+          file: 350_Projects/Week_07/week_07.qmd
+        - text: "Car Wash"
+          file: 350_Projects/Week_07/Car_Wash_25.qmd
+        - text: "Task/project name here"
+          file: 350_Projects/Week_07/its_about_time_26.qmd
+        - text: "Task/project name here"
+          file: 350_Projects/Week_07/stocks_27.qmd
+
+    - title: "Week 8 Sidebar"
+      style: "docked"
+      background: light
+      contents:
+        - text: "Introduction"
+          file: 350_Projects/Week_08/week_08.qmd
+        - text: "Task/project name here"
+          file: 350_Projects/Week_08/us_cities_28.qmd
+        - text: "Task/project name here"
+          file: 350_Projects/Week_08/get_in_shp_29.qmd
+        - text: "Task/project name here"
+          file: 350_Projects/Week_08/building_the_past_30.qmd
+
+    - title: "Week 9 Sidebar"
+      style: "docked"
+      background: light
+      contents:
+        - text: "Introduction"
+          file: 350_Projects/Week_09/week_09.qmd
+        - text: "Task/project name here"
+          file: 350_Projects/Week_09/data_search_38.qmd
+        - text: "Task/project name here"
+          file: 350_Projects/Week_09/interactive_maps_31.qmd
+          
+    - title: "Week 10 Sidebar"
+      style: "docked"
+      background: light
+      contents:
+        - text: "Introduction"
+          file: 350_Projects/Week_10/week_10.qmd
+        - text: "Task/project name here"
+          file: 350_Projects/Week_10/strings_and_regex_19.qmd
+        - text: "Task/project name here"
+          file: 350_Projects/Week_10/counting_words_20.qmd
+        - text: "Task/project name here"
+          file: 350_Projects/Week_10/distance_between_savior_names_part1_21.qmd
+          
+    - title: "Week 11 Sidebar"
+      style: "docked"
+      background: light
+      contents:
+        - text: "Introduction"
+          file: 350_Projects/Week_11/week_11.qmd
+          
+    - title: "Week 12 Sidebar"
+      style: "docked"
+      background: light
+      contents:
+        - text: "Introduction"
+          file: 350_Projects/Week_12/week_12.qmd
+        - text: "Task/project name here"
+          file: 350_Projects/Week_12/chipotle_functions_22.qmd
+        - text: "Task/project name here"
+          file: 350_Projects/Week_12/chipotle_purrr_23.qmd
+        - text: "Task/project name here"
+          file: 350_Projects/Week_12/distance_between_savior_names_part2_24.qmd
+          
+    - title: "Week 13 Sidebar"
+      style: "docked"
+      background: light
+      contents:
+        - text: "Introduction"
+          file: 350_Projects/Week_13/week_13.qmd
+          
+  
+# end of code for sidebar folders for DS 350
+          
+    - title: "DS 450 Projects"
+      style: "docked"
+      background: light
+      contents:
+        - text: "DS450 Projects"
+          file: 450_projects.qmd
+        - text: "---"
+        - text: "Project 0"
+          file: 450_Projects/project0.qmd
+        - text: "---"
+# remove 450 qmd 1-6 for faster rendering
+
+    - title: "DS 460 Projects"
+      style: "docked"
+      background: light
+      contents:
+        - text: "DS450 Projects"
+          file: 460_projects.qmd
+        - text: "---"
+        - text: "Project 0"
+          file: 460_Projects/project0.qmd
+        - text: "---"
+# remove 460 qmd 1-6 for faster rendering
+
+        #continue the pattern if you need more links
+        #copy paste from title and keep it indented to sidebar to add additonal sidebar navigation for other pages
+
+format:  
+  html:
+    theme: #see this link to customize the theme with css (https://quarto.org/docs/output-formats/html-themes.html#dark-mode)
+      light: flatly # more themes can be found [here](https://quarto.org/docs/output-formats/html-themes.html)
+      dark: darkly
+      #light: cosmo
+      #dark: [cosmo, theme-dark.scss]
+    css: styles.css
+    toc: true
+
+
+

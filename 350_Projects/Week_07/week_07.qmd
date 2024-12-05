@@ -1,0 +1,33 @@
+---
+title: "Weekly Notes"
+subtitle: "Course DS 350"
+author: "[STUDENT NAME]"
+format:
+  html:
+    self-contained: true
+    page-layout: full
+    title-block-banner: true
+    toc: true
+    toc-depth: 3
+    toc-location: body
+    number-sections: false
+    html-math-method: katex
+    code-fold: true
+    code-summary: "Show the code"
+    code-overflow: wrap
+    code-copy: hover
+    code-tools:
+        source: false
+        toggle: true
+        caption: See code
+execute: 
+  warning: false
+    
+---
+
+-   [Car Wash](/350_Projects/Week_07/Car_Wash_25.qmd)
+-   [its_about_time_26](/350_Projects/Week_07/its_about_time_26.qmd)
+-   [stocks_27](/350_Projects/Week_07/stocks_27.qmd)
+
+
+### Weekly Notes

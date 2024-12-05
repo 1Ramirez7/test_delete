@@ -1,0 +1,769 @@
+[
+  {
+    "objectID": "Templates/DS350_Template.html",
+    "href": "Templates/DS350_Template.html",
+    "title": "Weekly Notes",
+    "section": "",
+    "text": "Weekly Notes\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "resume.html",
+    "href": "resume.html",
+    "title": "Issac Newton’s CV",
+    "section": "",
+    "text": "Physicist, Mathematician, Cambridge professor.\n\nisaac@applesdofall.org | My wikipedia page\n\n\n\nStanding on the shoulders of giants\n\n\nLaws of motion, gravitation, minting coins, disliking Robert Hooke\n\n\n\nCooling, power series, optics, alchemy, planetary motions, apples.\n\n\n\n\n1654-1660 The King’s School, Grantham.\nJune 1661 - now Trinity College, Cambridge\n\nSizar\n\n1667 - death Trinity College, Cambridge\n\nFellow\n\n\n\n\n2012 President, Royal Society, London, UK\nAssociate, French Academy of Science, Paris, France\n\n\n\n\n\n\n1669 Newton Sir I, De analysi per æquationes numero terminorum infinitas.\n1669 Lectiones opticæ.\netc. etc. etc.\n\n\n\n2012 Infinitesimal calculus for solutions to physics problems, SMBC patent 001\n\n\n\n\n1600 Royal Mint, London\n\nWarden\nMinted coins\n\n1600 Lucasian professor of Mathematics, Cambridge University"
+  },
+  {
+    "objectID": "resume.html#currently",
+    "href": "resume.html#currently",
+    "title": "Issac Newton’s CV",
+    "section": "",
+    "text": "Standing on the shoulders of giants\n\n\nLaws of motion, gravitation, minting coins, disliking Robert Hooke\n\n\n\nCooling, power series, optics, alchemy, planetary motions, apples."
+  },
+  {
+    "objectID": "resume.html#education",
+    "href": "resume.html#education",
+    "title": "Issac Newton’s CV",
+    "section": "",
+    "text": "1654-1660 The King’s School, Grantham.\nJune 1661 - now Trinity College, Cambridge\n\nSizar\n\n1667 - death Trinity College, Cambridge\n\nFellow"
+  },
+  {
+    "objectID": "resume.html#awards",
+    "href": "resume.html#awards",
+    "title": "Issac Newton’s CV",
+    "section": "",
+    "text": "2012 President, Royal Society, London, UK\nAssociate, French Academy of Science, Paris, France"
+  },
+  {
+    "objectID": "resume.html#publications",
+    "href": "resume.html#publications",
+    "title": "Issac Newton’s CV",
+    "section": "",
+    "text": "1669 Newton Sir I, De analysi per æquationes numero terminorum infinitas.\n1669 Lectiones opticæ.\netc. etc. etc.\n\n\n\n2012 Infinitesimal calculus for solutions to physics problems, SMBC patent 001"
+  },
+  {
+    "objectID": "resume.html#occupation",
+    "href": "resume.html#occupation",
+    "title": "Issac Newton’s CV",
+    "section": "",
+    "text": "1600 Royal Mint, London\n\nWarden\nMinted coins\n\n1600 Lucasian professor of Mathematics, Cambridge University"
+  },
+  {
+    "objectID": "githubPush_notes.html",
+    "href": "githubPush_notes.html",
+    "title": "Your_Name_here - Data Science Portfolio",
+    "section": "",
+    "text": "#30 remove changes to yml code to be back to the normal due to crash #30 -name of push in reference: fixed week error for ds350 on index file - after the push reference I started messing with the yamal code and it went south - so this push revernts the yml code back to what it was for this push: fixed week error for ds350 on index file\n#31 testing change from gh-pages to main under build and deployment #31 - testing the setting on git hub settings/pages/branch/main - change from gh-pages to main\n#32 incorrect deployment fixed #32 - the deployment only published my readme fileand not the index file with all links - I’m going to render site within r studio to see if that fixes. - keeping github settings from push #31\n#33 reverting back to normal github push settings #33 - reverting back to make sure everything still runs as the default template - if succesful I’m going to save this copy as the default template - then I’m going to try and switch to doc site and see if that works - Important to note that I went back to gh-pages branch undoing push #31 - push #31 did not work out as it wasn’t reading the htmls at all.\n#34 one last try with ai advice #34 - I’m going to use the publish and quarto yml code ai gave and see what that does - I never tried both codes together but this one I will try both. - This ai notes are in my normal portfolio repository notes - I will need to combine notes on this but I will try to just work with this template for now.\n#35 reverting back to normal github push settings #35 - did not work - this error: Error: No file in /home/runner/work/DS350-website-template/DS350-website-template matched to [/requirements.txt or /pyproject.toml], make sure you have checked out the target repository - This file name is in the publish.yml but seems to be commmented out, and the libraries that will go in that file are in the publish.yml - maybe who ever build the publish.yml was running into trouble with the requirements.txt file so just skip it and added to publish - Other research has shown the requirements.txt file so obviously it is a needed file, but idk why this defualt template has it comment out and obviously no requirement.txt file is present\n#36 Trying docs format #36 - deleteting the publish.yml file - edited quarto.yml and index.qmd to reflect the docs format - this was done by mirroring the time series set up - When doing this, need to render the site in R studio and then push to github - done under Build - Render Website in R studio - on the github settings/pages/branch/main/docs - this is where the site is published and not template default of gh-pages/_site\n#37 Successful run w/ docs format #37 - # 36 ran successfully for the doc format - delete the publish.yml file - delete the .github site_libs and _site folders - they were link to the gh-pages push\n#38 Python qmd files for ds250 #38 - Erin’s ds250 projects cause some errors because of the python chunk codes. - my r studio hasnt been set up to run python code so I ran into a library error - I’m going to figure out how to make a folder that has this libraries installed and stored - this step would probably have to be ran in vs code or where ever the python code was created first (r studio or vs code) - because when creating the python code, it has to be ran to complete, but to run it has to be properly loaded in the envoroment. - I added the requirements.txt to the quarto.yml and created the requirements.txt file - I’m runnig this in vs code - This is a major issue that needs to be address to make sure python and R code files are ran properly when repository is clone into a new divice\n#39 Successful run w/ python qmd files for ds250 #39 - #38 ran successfully for the python qmd files - added the requirements.txt to the quarto.yml and created the requirements.txt file - ran the requirements.txt file in vs code - NEXT STEP IS TO CLONE ON A NEW DEVICE AND SEE HOW THE LIBRARY PROCESS WILL WORK. - WHAT WILL HAPPEN WHEN FIRST RENDER ON vs CODE VS r STUDIO. - The only thing change from my working template is the adding of the requirements.txt file, and nothing else changed.?\n#40 - deleted old gh-pages files, and added python requirements.txt file #40\nPush #36 on the template repository was successful with the doc format, so I will do the same here Push #38 & 39 on the template repository was updating to handle DS250 course work (using python and VS code) Was able to run Erin’s ds250 code on my vs code I’m not sure that fix the python library problem so I’m planning on testing to clone on a new device and see what happens I may have to inlcude code steps to make sure users download python libraries before rendering site in vs or r studio Idk how r studio will handle the python code though so it gets interesting for sure - Maybe first only rendering python files in vs code will probably be best, but this is like an extra step - Be nice to figure this out though So this push updates to docs format and includes python’s requirement.txt file\n#41 - removing unwanted files #41\ndeleted some other files from gh-pages also notice that when I pull, it pulls the gh-pages branch, so I have to switch back to main I also notice github had another branch name gh-pages, so I deleted that branch gonna do a run test to make sure everything runs find\n#42 - mkaing sure site is working #42\ntesting to see everything is working fine after deleting some old gh-pages files and removing old gh-pages branch from github\n#44 - updating to template only & making raw copy #44 - This push should serve as a copy of a working template for the DS350 & DS250 - This update handles the python code and the doc format, but I don’t know how it does when clone to a new device and how it will run in vs code vs R studio. - Need to research how this yml, index, and requirements will be handle in vs code vs R studio in new devices - I should work on adding a file names for Ds350 and Ds250 so it can be share - This should allow for me to edit yml code or other independent files - should allow others to upload qmd files, and adding new yml code should not be a problem\n#45 updating readme.md file to have instructions #45 - this push and probably next few will just be to update the readme.md file to have instructions.\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "460_Projects/project0.html",
+    "href": "460_Projects/project0.html",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "Paste in a template\n\n\n\n\n Back to top",
+    "crumbs": [
+      "DS460 Projects",
+      "Project 0"
+    ]
+  },
+  {
+    "objectID": "450_Projects/project0.html",
+    "href": "450_Projects/project0.html",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "Paste in a template\n\n\n\n\n Back to top",
+    "crumbs": [
+      "DS450 Projects",
+      "Project 0"
+    ]
+  },
+  {
+    "objectID": "350_Projects/Week_13/week_13.html",
+    "href": "350_Projects/Week_13/week_13.html",
+    "title": "Weekly Notes",
+    "section": "",
+    "text": "Weekly Notes\n\n\n\n\n Back to top",
+    "crumbs": [
+      "DS350 Projects",
+      "Week 13"
+    ]
+  },
+  {
+    "objectID": "350_Projects/Week_12/distance_between_savior_names_part2_24.html",
+    "href": "350_Projects/Week_12/distance_between_savior_names_part2_24.html",
+    "title": "Task/project name here",
+    "section": "",
+    "text": "Code\n# Libraries\nif (!require(\"pacman\")) install.packages(\"pacman\")\npacman::p_load(reader, ggplot2)",
+    "crumbs": [
+      "Task/project name here"
+    ]
+  },
+  {
+    "objectID": "350_Projects/Week_12/distance_between_savior_names_part2_24.html#dow-jones-industrial-average-returns",
+    "href": "350_Projects/Week_12/distance_between_savior_names_part2_24.html#dow-jones-industrial-average-returns",
+    "title": "Task/project name here",
+    "section": "",
+    "text": "Code\n# Libraries\nif (!require(\"pacman\")) install.packages(\"pacman\")\npacman::p_load(reader, ggplot2)",
+    "crumbs": [
+      "Task/project name here"
+    ]
+  },
+  {
+    "objectID": "350_Projects/Week_12/chipotle_functions_22.html",
+    "href": "350_Projects/Week_12/chipotle_functions_22.html",
+    "title": "Task/project name here",
+    "section": "",
+    "text": "Code\n# Libraries\nif (!require(\"pacman\")) install.packages(\"pacman\")\npacman::p_load(reader, ggplot2)",
+    "crumbs": [
+      "Task/project name here"
+    ]
+  },
+  {
+    "objectID": "350_Projects/Week_12/chipotle_functions_22.html#dow-jones-industrial-average-returns",
+    "href": "350_Projects/Week_12/chipotle_functions_22.html#dow-jones-industrial-average-returns",
+    "title": "Task/project name here",
+    "section": "",
+    "text": "Code\n# Libraries\nif (!require(\"pacman\")) install.packages(\"pacman\")\npacman::p_load(reader, ggplot2)",
+    "crumbs": [
+      "Task/project name here"
+    ]
+  },
+  {
+    "objectID": "350_Projects/Week_10/week_10.html",
+    "href": "350_Projects/Week_10/week_10.html",
+    "title": "Weekly Notes",
+    "section": "",
+    "text": "strings_and_regex_19\ncounting_words_20\ndistance_between_savior_names_part1_21\n\n\nWeekly Notes\n\n\n\n\n Back to top",
+    "crumbs": [
+      "DS350 Projects",
+      "Week 10"
+    ]
+  },
+  {
+    "objectID": "350_Projects/Week_10/distance_between_savior_names_part1_21.html",
+    "href": "350_Projects/Week_10/distance_between_savior_names_part1_21.html",
+    "title": "Task/project name here",
+    "section": "",
+    "text": "Code\n# Libraries\nif (!require(\"pacman\")) install.packages(\"pacman\")\npacman::p_load(reader, ggplot2)",
+    "crumbs": [
+      "Task/project name here"
+    ]
+  },
+  {
+    "objectID": "350_Projects/Week_10/distance_between_savior_names_part1_21.html#dow-jones-industrial-average-returns",
+    "href": "350_Projects/Week_10/distance_between_savior_names_part1_21.html#dow-jones-industrial-average-returns",
+    "title": "Task/project name here",
+    "section": "",
+    "text": "Code\n# Libraries\nif (!require(\"pacman\")) install.packages(\"pacman\")\npacman::p_load(reader, ggplot2)",
+    "crumbs": [
+      "Task/project name here"
+    ]
+  },
+  {
+    "objectID": "350_Projects/Week_09/week_09.html",
+    "href": "350_Projects/Week_09/week_09.html",
+    "title": "Weekly Notes",
+    "section": "",
+    "text": "interactive_maps_31\ndata_search_38\n\n\nWeekly Notes\n\n\n\n\n Back to top",
+    "crumbs": [
+      "DS350 Projects",
+      "Week 9"
+    ]
+  },
+  {
+    "objectID": "350_Projects/Week_09/data_search_38.html",
+    "href": "350_Projects/Week_09/data_search_38.html",
+    "title": "Task/project name here",
+    "section": "",
+    "text": "Code\n# Libraries\nif (!require(\"pacman\")) install.packages(\"pacman\")\npacman::p_load(reader, ggplot2)",
+    "crumbs": [
+      "Task/project name here"
+    ]
+  },
+  {
+    "objectID": "350_Projects/Week_09/data_search_38.html#dow-jones-industrial-average-returns",
+    "href": "350_Projects/Week_09/data_search_38.html#dow-jones-industrial-average-returns",
+    "title": "Task/project name here",
+    "section": "",
+    "text": "Code\n# Libraries\nif (!require(\"pacman\")) install.packages(\"pacman\")\npacman::p_load(reader, ggplot2)",
+    "crumbs": [
+      "Task/project name here"
+    ]
+  },
+  {
+    "objectID": "350_Projects/Week_08/us_cities_28.html",
+    "href": "350_Projects/Week_08/us_cities_28.html",
+    "title": "Task/project name here",
+    "section": "",
+    "text": "Code\n# Libraries\nif (!require(\"pacman\")) install.packages(\"pacman\")\npacman::p_load(reader, ggplot2)",
+    "crumbs": [
+      "Task/project name here"
+    ]
+  },
+  {
+    "objectID": "350_Projects/Week_08/us_cities_28.html#dow-jones-industrial-average-returns",
+    "href": "350_Projects/Week_08/us_cities_28.html#dow-jones-industrial-average-returns",
+    "title": "Task/project name here",
+    "section": "",
+    "text": "Code\n# Libraries\nif (!require(\"pacman\")) install.packages(\"pacman\")\npacman::p_load(reader, ggplot2)",
+    "crumbs": [
+      "Task/project name here"
+    ]
+  },
+  {
+    "objectID": "350_Projects/Week_08/building_the_past_30.html",
+    "href": "350_Projects/Week_08/building_the_past_30.html",
+    "title": "Task/project name here",
+    "section": "",
+    "text": "Code\n# Libraries\nif (!require(\"pacman\")) install.packages(\"pacman\")\npacman::p_load(reader, ggplot2)",
+    "crumbs": [
+      "Task/project name here"
+    ]
+  },
+  {
+    "objectID": "350_Projects/Week_08/building_the_past_30.html#dow-jones-industrial-average-returns",
+    "href": "350_Projects/Week_08/building_the_past_30.html#dow-jones-industrial-average-returns",
+    "title": "Task/project name here",
+    "section": "",
+    "text": "Code\n# Libraries\nif (!require(\"pacman\")) install.packages(\"pacman\")\npacman::p_load(reader, ggplot2)",
+    "crumbs": [
+      "Task/project name here"
+    ]
+  },
+  {
+    "objectID": "350_Projects/Week_07/stocks_27.html",
+    "href": "350_Projects/Week_07/stocks_27.html",
+    "title": "Task/project name here",
+    "section": "",
+    "text": "Back to top",
+    "crumbs": [
+      "Task/project name here"
+    ]
+  },
+  {
+    "objectID": "350_Projects/Week_07/car_wash_25.html",
+    "href": "350_Projects/Week_07/car_wash_25.html",
+    "title": "25 Car Wash",
+    "section": "",
+    "text": "Back to top"
+  },
+  {
+    "objectID": "350_Projects/Week_06/18_BYU_Baseball.html",
+    "href": "350_Projects/Week_06/18_BYU_Baseball.html",
+    "title": "18 BYU Baseball",
+    "section": "",
+    "text": "Code\nif (!require(\"pacman\")) install.packages(\"pacman\")\npacman::p_load(tidyverse, Lahman, priceR)\n\n\n\n\n\n Back to top",
+    "crumbs": [
+      "18 BYU Baseball"
+    ]
+  },
+  {
+    "objectID": "350_Projects/Week_05/week_05.html",
+    "href": "350_Projects/Week_05/week_05.html",
+    "title": "Weekly Notes",
+    "section": "",
+    "text": "13 Polish a Previous Visualization\n14 Our World in Data Part 1\n15 Choose Your Own\n\n\nWeekly Notes\n\n\n\n\n Back to top",
+    "crumbs": [
+      "DS350 Projects",
+      "Week 5"
+    ]
+  },
+  {
+    "objectID": "350_Projects/Week_05/14_Our_World_in_Data_Part_1.html",
+    "href": "350_Projects/Week_05/14_Our_World_in_Data_Part_1.html",
+    "title": "14 Our World in Data Part 1",
+    "section": "",
+    "text": "Back to top",
+    "crumbs": [
+      "14 Our World in Data Part 1"
+    ]
+  },
+  {
+    "objectID": "350_Projects/Week_04/week_04.html",
+    "href": "350_Projects/Week_04/week_04.html",
+    "title": "Weekly Notes",
+    "section": "",
+    "text": "Stock Data\nMean Heights of Countries Over Time\nCombining Height Files\n\n\nWeekly Notes\n\n\n\n\n Back to top",
+    "crumbs": [
+      "DS350 Projects",
+      "Week 4"
+    ]
+  },
+  {
+    "objectID": "350_Projects/Week_04/Mean Heights of Countries Over Time.html",
+    "href": "350_Projects/Week_04/Mean Heights of Countries Over Time.html",
+    "title": "Mean Heights of Countries Over Time",
+    "section": "",
+    "text": "Back to top",
+    "crumbs": [
+      "Mean Heights of Countries Over Time"
+    ]
+  },
+  {
+    "objectID": "350_Projects/Week_03/Wings to Fly.html",
+    "href": "350_Projects/Week_03/Wings to Fly.html",
+    "title": "Wings to Fly",
+    "section": "",
+    "text": "Back to top",
+    "crumbs": [
+      "Wings to Fly"
+    ]
+  },
+  {
+    "objectID": "350_Projects/Week_03/Reducing Gun Deaths.html",
+    "href": "350_Projects/Week_03/Reducing Gun Deaths.html",
+    "title": "Reducing Gun Deaths",
+    "section": "",
+    "text": "Back to top",
+    "crumbs": [
+      "Reducing Gun Deaths"
+    ]
+  },
+  {
+    "objectID": "350_Projects/Week_02/week_02.html",
+    "href": "350_Projects/Week_02/week_02.html",
+    "title": "Weekly Notes",
+    "section": "",
+    "text": "Visualizing Large Distributions\nGapminder Part 1\n\n\nWeekly Notes\n\n\n\n\n Back to top",
+    "crumbs": [
+      "DS350 Projects",
+      "Week 2"
+    ]
+  },
+  {
+    "objectID": "350_Projects/Week_02/Gapminder Part 1.html",
+    "href": "350_Projects/Week_02/Gapminder Part 1.html",
+    "title": "Gapminder Part 1",
+    "section": "",
+    "text": "Back to top",
+    "crumbs": [
+      "Gapminder Part 1"
+    ]
+  },
+  {
+    "objectID": "250_projects.html",
+    "href": "250_projects.html",
+    "title": "DS250 Projects",
+    "section": "",
+    "text": "Project 0\nProject 1\nProject 2\nProject 3\nProject 4\nProject 5",
+    "crumbs": [
+      "DS250 Projects"
+    ]
+  },
+  {
+    "objectID": "250_projects.html#repo-for-all-my-projects",
+    "href": "250_projects.html#repo-for-all-my-projects",
+    "title": "DS250 Projects",
+    "section": "",
+    "text": "Project 0\nProject 1\nProject 2\nProject 3\nProject 4\nProject 5",
+    "crumbs": [
+      "DS250 Projects"
+    ]
+  },
+  {
+    "objectID": "250_Projects/project4.html",
+    "href": "250_Projects/project4.html",
+    "title": "Client Report - Introduction",
+    "section": "",
+    "text": "Back to top",
+    "crumbs": [
+      "DS250 Projects",
+      "Project 4"
+    ]
+  },
+  {
+    "objectID": "250_Projects/project2.html",
+    "href": "250_Projects/project2.html",
+    "title": "Client Report - Introduction",
+    "section": "",
+    "text": "Back to top",
+    "crumbs": [
+      "DS250 Projects",
+      "Project 2"
+    ]
+  },
+  {
+    "objectID": "250_Projects/project0.html",
+    "href": "250_Projects/project0.html",
+    "title": "Client Report - Introduction",
+    "section": "",
+    "text": "Back to top",
+    "crumbs": [
+      "DS250 Projects",
+      "Project 0"
+    ]
+  },
+  {
+    "objectID": "250_Projects/project1.html",
+    "href": "250_Projects/project1.html",
+    "title": "Client Report - Introduction",
+    "section": "",
+    "text": "Back to top",
+    "crumbs": [
+      "DS250 Projects",
+      "Project 1"
+    ]
+  },
+  {
+    "objectID": "250_Projects/project3.html",
+    "href": "250_Projects/project3.html",
+    "title": "Client Report - Introduction",
+    "section": "",
+    "text": "Back to top",
+    "crumbs": [
+      "DS250 Projects",
+      "Project 3"
+    ]
+  },
+  {
+    "objectID": "250_Projects/project5.html",
+    "href": "250_Projects/project5.html",
+    "title": "Client Report - Introduction",
+    "section": "",
+    "text": "Back to top",
+    "crumbs": [
+      "DS250 Projects",
+      "Project 5"
+    ]
+  },
+  {
+    "objectID": "350_Projects/Week_01/week_01.html",
+    "href": "350_Projects/Week_01/week_01.html",
+    "title": "Weekly Notes",
+    "section": "",
+    "text": "Empty space\n\nWeekly Notes\n\n\n\n\n Back to top",
+    "crumbs": [
+      "DS350 Projects",
+      "Week 1"
+    ]
+  },
+  {
+    "objectID": "350_Projects/Week_02/Visualizing Large Distributions.html",
+    "href": "350_Projects/Week_02/Visualizing Large Distributions.html",
+    "title": "Visualizing Large Distributions",
+    "section": "",
+    "text": "Back to top",
+    "crumbs": [
+      "Visualizing Large Distributions"
+    ]
+  },
+  {
+    "objectID": "350_Projects/Week_03/Gapminder Part 2.html",
+    "href": "350_Projects/Week_03/Gapminder Part 2.html",
+    "title": "Gapminder Part 2",
+    "section": "",
+    "text": "Back to top",
+    "crumbs": [
+      "Gapminder Part 2"
+    ]
+  },
+  {
+    "objectID": "350_Projects/Week_03/week_03.html",
+    "href": "350_Projects/Week_03/week_03.html",
+    "title": "Weekly Notes",
+    "section": "",
+    "text": "Gapminder Part 2\nReducing Gun Deaths\nWings to Fly\n\n\nWeekly Notes\n\n\n\n\n Back to top",
+    "crumbs": [
+      "DS350 Projects",
+      "Week 3"
+    ]
+  },
+  {
+    "objectID": "350_Projects/Week_04/Combining Height Files.html",
+    "href": "350_Projects/Week_04/Combining Height Files.html",
+    "title": "Combining Height Datesets from the 1700s to 1900s",
+    "section": "",
+    "text": "Code\nif (!require(\"pacman\")) install.packages(\"pacman\")\npacman::p_load(tidyverse, haven, foreign, ggpubr)\n\n# leaving this here because I know it will cause problems\n# the zip file, you just need to run the unzip line of code once the comment out\n# when referring to the datasets, either use the current df name or edit accordingly\ngermancon &lt;- read_dta(\"data/germanconscr.dta\")\nprison &lt;- read_dta(\"data/germanprison.dta\")\n# unzip(\"data/Heights_south-east.zip\", exdir = \"data/Heights_south-east\")\ng18 &lt;- read.dbf(\"data/Heights_south-east/B6090.DBF\")\nmain &lt;- read_sav(\"data/main05022005.sav\")\nBLS &lt;- read_csv(\"https://raw.githubusercontent.com/hadley/r4ds/main/data/heights.csv\")\n\n\n\n\n\n Back to top",
+    "crumbs": [
+      "Combining Height Files"
+    ]
+  },
+  {
+    "objectID": "350_Projects/Week_04/Stock Data.html",
+    "href": "350_Projects/Week_04/Stock Data.html",
+    "title": "Task/project name here",
+    "section": "",
+    "text": "Back to top",
+    "crumbs": [
+      "Stock Data"
+    ]
+  },
+  {
+    "objectID": "350_Projects/Week_05/13_Polish_a_Previous_Visualization.html",
+    "href": "350_Projects/Week_05/13_Polish_a_Previous_Visualization.html",
+    "title": "Reducing Gun Deaths",
+    "section": "",
+    "text": "Back to top",
+    "crumbs": [
+      "13 Polish a Previous Visualization"
+    ]
+  },
+  {
+    "objectID": "350_Projects/Week_05/15_Choose_Your_Own_OWD.html",
+    "href": "350_Projects/Week_05/15_Choose_Your_Own_OWD.html",
+    "title": "Our World in Data Part 1",
+    "section": "",
+    "text": "Back to top",
+    "crumbs": [
+      "15 Choose Your Own OWD"
+    ]
+  },
+  {
+    "objectID": "350_Projects/Week_06/16_Age_of_Planes.html",
+    "href": "350_Projects/Week_06/16_Age_of_Planes.html",
+    "title": "16 Age of Planes",
+    "section": "",
+    "text": "Code\nif (!require(\"pacman\")) install.packages(\"pacman\")\npacman::p_load(nycflights13)\n\n\n\n\n\n Back to top",
+    "crumbs": [
+      "16 Age of Planes"
+    ]
+  },
+  {
+    "objectID": "350_Projects/Week_06/week_06.html",
+    "href": "350_Projects/Week_06/week_06.html",
+    "title": "Weekly Notes",
+    "section": "",
+    "text": "16 Age of Planes\n18 BYU Baseball\n\n\nWeekly Notes\n\n\n\n\n Back to top",
+    "crumbs": [
+      "DS350 Projects",
+      "Week 6"
+    ]
+  },
+  {
+    "objectID": "350_Projects/Week_07/its_about_time_26.html",
+    "href": "350_Projects/Week_07/its_about_time_26.html",
+    "title": "Task/project name here",
+    "section": "",
+    "text": "Back to top",
+    "crumbs": [
+      "Task/project name here"
+    ]
+  },
+  {
+    "objectID": "350_Projects/Week_07/week_07.html",
+    "href": "350_Projects/Week_07/week_07.html",
+    "title": "Weekly Notes",
+    "section": "",
+    "text": "Car Wash\nits_about_time_26\nstocks_27\n\n\nWeekly Notes\n\n\n\n\n Back to top",
+    "crumbs": [
+      "DS350 Projects",
+      "Week 7"
+    ]
+  },
+  {
+    "objectID": "350_Projects/Week_08/get_in_shp_29.html",
+    "href": "350_Projects/Week_08/get_in_shp_29.html",
+    "title": "Task/project name here",
+    "section": "",
+    "text": "Code\n# Libraries\nif (!require(\"pacman\")) install.packages(\"pacman\")\npacman::p_load(reader, ggplot2)",
+    "crumbs": [
+      "Task/project name here"
+    ]
+  },
+  {
+    "objectID": "350_Projects/Week_08/get_in_shp_29.html#dow-jones-industrial-average-returns",
+    "href": "350_Projects/Week_08/get_in_shp_29.html#dow-jones-industrial-average-returns",
+    "title": "Task/project name here",
+    "section": "",
+    "text": "Code\n# Libraries\nif (!require(\"pacman\")) install.packages(\"pacman\")\npacman::p_load(reader, ggplot2)",
+    "crumbs": [
+      "Task/project name here"
+    ]
+  },
+  {
+    "objectID": "350_Projects/Week_08/week_08.html",
+    "href": "350_Projects/Week_08/week_08.html",
+    "title": "Weekly Notes",
+    "section": "",
+    "text": "us_cities_28\nget_in_shp_29\nbuilding_the_past_30\n\n\nWeekly Notes\n\n\n\n\n Back to top",
+    "crumbs": [
+      "DS350 Projects",
+      "Week 8"
+    ]
+  },
+  {
+    "objectID": "350_Projects/Week_09/interactive_maps_31.html",
+    "href": "350_Projects/Week_09/interactive_maps_31.html",
+    "title": "Task/project name here",
+    "section": "",
+    "text": "Code\n# Libraries\nif (!require(\"pacman\")) install.packages(\"pacman\")\npacman::p_load(reader, ggplot2)",
+    "crumbs": [
+      "Task/project name here"
+    ]
+  },
+  {
+    "objectID": "350_Projects/Week_09/interactive_maps_31.html#dow-jones-industrial-average-returns",
+    "href": "350_Projects/Week_09/interactive_maps_31.html#dow-jones-industrial-average-returns",
+    "title": "Task/project name here",
+    "section": "",
+    "text": "Code\n# Libraries\nif (!require(\"pacman\")) install.packages(\"pacman\")\npacman::p_load(reader, ggplot2)",
+    "crumbs": [
+      "Task/project name here"
+    ]
+  },
+  {
+    "objectID": "350_Projects/Week_10/counting_words_20.html",
+    "href": "350_Projects/Week_10/counting_words_20.html",
+    "title": "Task/project name here",
+    "section": "",
+    "text": "Code\n# Libraries\nif (!require(\"pacman\")) install.packages(\"pacman\")\npacman::p_load(reader, ggplot2)",
+    "crumbs": [
+      "Task/project name here"
+    ]
+  },
+  {
+    "objectID": "350_Projects/Week_10/counting_words_20.html#dow-jones-industrial-average-returns",
+    "href": "350_Projects/Week_10/counting_words_20.html#dow-jones-industrial-average-returns",
+    "title": "Task/project name here",
+    "section": "",
+    "text": "Code\n# Libraries\nif (!require(\"pacman\")) install.packages(\"pacman\")\npacman::p_load(reader, ggplot2)",
+    "crumbs": [
+      "Task/project name here"
+    ]
+  },
+  {
+    "objectID": "350_Projects/Week_10/strings_and_regex_19.html",
+    "href": "350_Projects/Week_10/strings_and_regex_19.html",
+    "title": "Task/project name here",
+    "section": "",
+    "text": "Code\n# Libraries\nif (!require(\"pacman\")) install.packages(\"pacman\")\npacman::p_load(reader, ggplot2)",
+    "crumbs": [
+      "Task/project name here"
+    ]
+  },
+  {
+    "objectID": "350_Projects/Week_10/strings_and_regex_19.html#dow-jones-industrial-average-returns",
+    "href": "350_Projects/Week_10/strings_and_regex_19.html#dow-jones-industrial-average-returns",
+    "title": "Task/project name here",
+    "section": "",
+    "text": "Code\n# Libraries\nif (!require(\"pacman\")) install.packages(\"pacman\")\npacman::p_load(reader, ggplot2)",
+    "crumbs": [
+      "Task/project name here"
+    ]
+  },
+  {
+    "objectID": "350_Projects/Week_11/week_11.html",
+    "href": "350_Projects/Week_11/week_11.html",
+    "title": "Weekly Notes",
+    "section": "",
+    "text": "Weekly Notes\n\n\n\n\n Back to top",
+    "crumbs": [
+      "DS350 Projects",
+      "Week 11"
+    ]
+  },
+  {
+    "objectID": "350_Projects/Week_12/chipotle_purrr_23.html",
+    "href": "350_Projects/Week_12/chipotle_purrr_23.html",
+    "title": "Task/project name here",
+    "section": "",
+    "text": "Code\n# Libraries\nif (!require(\"pacman\")) install.packages(\"pacman\")\npacman::p_load(reader, ggplot2)",
+    "crumbs": [
+      "Task/project name here"
+    ]
+  },
+  {
+    "objectID": "350_Projects/Week_12/chipotle_purrr_23.html#dow-jones-industrial-average-returns",
+    "href": "350_Projects/Week_12/chipotle_purrr_23.html#dow-jones-industrial-average-returns",
+    "title": "Task/project name here",
+    "section": "",
+    "text": "Code\n# Libraries\nif (!require(\"pacman\")) install.packages(\"pacman\")\npacman::p_load(reader, ggplot2)",
+    "crumbs": [
+      "Task/project name here"
+    ]
+  },
+  {
+    "objectID": "350_Projects/Week_12/week_12.html",
+    "href": "350_Projects/Week_12/week_12.html",
+    "title": "Weekly Notes",
+    "section": "",
+    "text": "chipotle_functions_22\nchipotle_purrr_23\ndistance_between_savior_names_part2_24\n\n\nWeekly Notes\n\n\n\n\n Back to top",
+    "crumbs": [
+      "DS350 Projects",
+      "Week 12"
+    ]
+  },
+  {
+    "objectID": "350_projects.html",
+    "href": "350_projects.html",
+    "title": "DS350 Projects",
+    "section": "",
+    "text": "Week 01\nWeek 02\nWeek 03\nWeek 04\nWeek 05\nWeek 06\nWeek 07\nWeek 08\nWeek 09\nWeek 10\nWeek 11\nWeek 12\nWeek 13",
+    "crumbs": [
+      "DS350 Projects"
+    ]
+  },
+  {
+    "objectID": "350_projects.html#repo-for-all-my-projects",
+    "href": "350_projects.html#repo-for-all-my-projects",
+    "title": "DS350 Projects",
+    "section": "",
+    "text": "Week 01\nWeek 02\nWeek 03\nWeek 04\nWeek 05\nWeek 06\nWeek 07\nWeek 08\nWeek 09\nWeek 10\nWeek 11\nWeek 12\nWeek 13",
+    "crumbs": [
+      "DS350 Projects"
+    ]
+  },
+  {
+    "objectID": "450_projects.html",
+    "href": "450_projects.html",
+    "title": "DS450 Projects",
+    "section": "",
+    "text": "Project 0\nProject 1\nProject 2\nProject 3\nProject 4\nProject 5\nProject 6",
+    "crumbs": [
+      "DS450 Projects"
+    ]
+  },
+  {
+    "objectID": "450_projects.html#repo-for-all-my-projects",
+    "href": "450_projects.html#repo-for-all-my-projects",
+    "title": "DS450 Projects",
+    "section": "",
+    "text": "Project 0\nProject 1\nProject 2\nProject 3\nProject 4\nProject 5\nProject 6",
+    "crumbs": [
+      "DS450 Projects"
+    ]
+  },
+  {
+    "objectID": "460_projects.html",
+    "href": "460_projects.html",
+    "title": "DS460 Projects",
+    "section": "",
+    "text": "Project 0\nProject 1\nProject 2\nProject 3\nProject 4\nProject 5\nProject 6",
+    "crumbs": [
+      "DS460 Projects",
+      "DS450 Projects"
+    ]
+  },
+  {
+    "objectID": "460_projects.html#repo-for-all-my-projects",
+    "href": "460_projects.html#repo-for-all-my-projects",
+    "title": "DS460 Projects",
+    "section": "",
+    "text": "Project 0\nProject 1\nProject 2\nProject 3\nProject 4\nProject 5\nProject 6",
+    "crumbs": [
+      "DS460 Projects",
+      "DS450 Projects"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "About Me",
+    "section": "",
+    "text": "DS 350 Course Work\nWeek 1 . Week 2 . Week 3 . Week 4 . Week 5 . Week 6 . Week 7 . Week 8 . Week 9 . Week 10 . Week 11 . Week 12 . Week 13"
+  },
+  {
+    "objectID": "index.html#data-wrangling-and-visualization-projects---ds-350",
+    "href": "index.html#data-wrangling-and-visualization-projects---ds-350",
+    "title": "About Me",
+    "section": "",
+    "text": "DS 350 Course Work\nWeek 1 . Week 2 . Week 3 . Week 4 . Week 5 . Week 6 . Week 7 . Week 8 . Week 9 . Week 10 . Week 11 . Week 12 . Week 13"
+  },
+  {
+    "objectID": "Templates/DS250_Template.html",
+    "href": "Templates/DS250_Template.html",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "Back to top"
+  }
+]
