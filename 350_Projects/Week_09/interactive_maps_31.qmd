@@ -10,3 +10,102 @@ format:
     code-fold: true
 ---
 
+# Introduction
+
+This analysis examines two datasets: the availability of fruits and vegetables and the average protein supply over a three-year average. Both datasets provide insights into the nutritional supply at the national level, measured in grams per person per day.
+
+## Data Sources and Quality
+
+### 1. Availability of Fruits and Vegetables
+
+**Source:** FAOSTAT\
+**Description:** Amounts of fruits and vegetables available in a country's food supply (grams per person per day).\
+**Quality:** High-quality data sourced from FAO's Food Balance Sheets, though it does not guarantee actual consumption.
+
+### 2. Average Protein Supply (3-Year Average)
+
+**Source:** FAOSTAT\
+**Description:** Grams of protein per person per day available in a country's food supply, calculated as a three-year average.\
+**Quality:** High-quality data with consideration of national-level variations.
+
+```{r, error=FALSE, message=FALSE, warning=FALSE}
+# libraries
+
+if (!require("pacman")) install.packages("pacman")
+pacman::p_load(tidyverse, sf, leaflet, maps)
+
+fruits_vegetables <- read_csv("availability-of-fruits-and-vegetables.csv")
+protein_supply <- read_csv("average-protein-supply-3-year-average.csv")
+
+
+```
+
+```{r, error=FALSE, message=FALSE, warning=FALSE}
+# fruits and vegetables data
+fruits_vegetables_clean <- fruits_vegetables |>
+  filter(!is.na(Value)) |>
+  rename(fruits_vegetables_supply = Value) |>
+  select(`Region Name`, `Start Year`, fruits_vegetables_supply)
+
+# protein supply data
+protein_supply_clean <- protein_supply |>
+  filter(!is.na(Value)) |>
+  rename(protein_supply = Value) |>
+  select(`Region Name`, `Start Year`, protein_supply)
+
+# merge df
+merged_data <- merge(fruits_vegetables_clean, protein_supply_clean, by = c("Region Name", "Start Year"))
+
+
+```
+
+# Interactive Map
+
+```{r, error=FALSE, warning=FALSE, message=FALSE}
+
+
+# Load & prep world map data
+world <- st_as_sf(maps::map("world", plot = FALSE, fill = TRUE))
+merged_data$`Region Name` <- as.character(merged_data$`Region Name`)
+world$ID <- as.character(world$ID)
+world_data <- world |>
+  left_join(merged_data, by = c("ID" = "Region Name"))
+
+
+# interactive map
+leaflet(world_data) |>
+  addTiles() |>
+  addPolygons(
+    fillColor = ~colorQuantile("YlGnBu", `fruits_vegetables_supply`)(`fruits_vegetables_supply`),
+    weight = 1,
+    opacity = 0.7,
+    color = 'white',
+    dashArray = '3',
+    fillOpacity = 0.7,
+    highlightOptions = highlightOptions(
+      weight = 3,
+      color = '#666',
+      dashArray = '',
+      fillOpacity = 0.7,
+      bringToFront = TRUE
+    ),
+    label = ~paste(`ID`,
+      "Fruits & Vegetables: ", round(`fruits_vegetables_supply`, 2), " g/capita/day",
+      "Protein: ", round(`protein_supply`, 2), " g/capita/day"
+    ),
+    labelOptions = labelOptions(
+      style = list("font-weight" = "normal", padding = "3px 8px"),
+      textsize = "15px",
+      direction = "auto"
+    )
+  ) |>
+  addLegend(
+    pal = colorQuantile("YlGnBu", NULL),
+    values = ~`fruits_vegetables_supply`,
+    opacity = 0.7,
+    title = "Fruits & Vegetables (g/capita/day)",
+    position = "bottomright"
+  )
+
+
+```
