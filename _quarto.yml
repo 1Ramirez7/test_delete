@@ -199,7 +199,7 @@ website:
           file: 350_Projects/Week_09/week_09.qmd
         - text: "Task/project name here"
           file: 350_Projects/Week_09/data_search_38.qmd
-        - text: "Task/project name here"
+        - text: "Interactive map"
           file: 350_Projects/Week_09/interactive_maps_31.qmd
           
     - title: "Week 10 Sidebar"
