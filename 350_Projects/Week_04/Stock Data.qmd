@@ -1,11 +1,9 @@
 ---
-title: "Task/project name here"
+title: "Stock Data"
 
 editor: visual
 execute:
   keep-md: true
-#  freeze: true alternative way to only render this doc and not all 
-# maybe the gh-pages setting cause all to render and docs dont? more testing
 
 date: "`r format(Sys.time(), '%B %d, %Y')`"
 warnings: false
@@ -15,3 +13,80 @@ format:
     code-fold: true
     code-line-numbers: true
 ---
+
+## Dow-Jones Industrial Average Returns
+
+```{r, error = FALSE, message = FALSE}
+# Libraries
+if (!require("pacman")) install.packages("pacman")
+pacman::p_load(reader, ggplot2, tidyverse, dplyr, kableExtra, knitr
+)
+
+stock_data <- read_rds('https://github.com/byuistats/data/raw/master/Dart_Expert_Dow_6month_anova/Dart_Expert_Dow_6month_anova.RDS')
+```
+
+```{r eval=FALSE, include=FALSE, message= FALSE}
+# This is a commented section
+results1: separates contest_period into two columns
+
+results2: sepeartes month_year_end into a month_end & year columns
+
+results3: removes months_start from the df
+
+results4: filters only DJIA variables from value column
+
+results5: groups by year the month_end
+
+results6: summaries, renames the value column to return
+
+results7: renames months in month_end column to the unique month name as others. what does this part do is.na(month_end)? the last part makes sure month_end is as.character. Would doing the as.character earlier be better?
+
+results8: ?pivot_wider function to make table by expanding the number of columns and decreasing the number of rows. Notice I use year and return columns. did not use the month_end column because it was group before this in results5.
+
+result9: so does this ungroup close the group_by done in results5? 
+
+```
+
+```{r, error = FALSE, message = FALSE}
+
+stock <- stock_data |>
+  separate(contest_period, into = c("month_start", "month_end_year"), sep = "-") |> #resutls1
+  separate(month_end_year, into = c("month_end", "year"), sep = "(?<=\\D)(?=\\d)") |> # results2
+  select(-month_start) |> # results3
+  filter(variable == "DJIA", !is.na(month_end)) |> # results4
+  group_by(year, month_end) |> # results5
+  summarise(return = value) |> # result6
+  mutate(
+    month_end = case_when(
+      month_end == "Jan." ~ 'January',
+      month_end == "Feb." ~ 'February',
+      month_end == "Mar." ~ 'March',
+      month_end == "Apr." ~ 'April',
+      month_end == "May" ~ 'May',
+      month_end == "Jun." ~ 'June',
+      month_end == "Jul." ~ 'July',
+      month_end == "Aug." ~ 'August',
+      month_end == "Sep." ~ 'September',
+      month_end == "Oct." ~ 'October',
+      month_end == "Nov." ~ 'November',
+      month_end == "Dec." ~ 'December',
+      month_end == "Febuary" ~ 'February',
+      is.na(month_end) ~ '-',
+      TRUE ~ as.character(month_end)
+    )
+  ) |> # results7
+  pivot_wider(names_from = year, values_from = return) |> # results8
+  ungroup() |> # results9
+  mutate(month_end = factor(month_end, levels = month.name)) |>
+  arrange(month_end) |>
+  rename(Month = month_end)
+
+kable(stock, format = "html", table.attr = "style='width:100%;'") %>%
+  kable_styling(full_width = FALSE, bootstrap_options = c("striped", "hover"))
+```
+
+```{r, error= FALSE, message=FALSE}
+
+saveRDS(stock, file = "tidy_stock.rds")
+
+```
